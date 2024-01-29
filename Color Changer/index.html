@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Color Changer</title>
+  </head>
+  <body>
+    <h1>Color Changer</h1>
+    <ul class="colorList">
+      <li id="green"></li>
+      <li id="blue"></li>
+      <li id="red"></li>
+      <li id="yellow"></li>
+      <li id="purple"></li>
+    </ul>
+
+    <script>
+      const colorList = document.querySelectorAll(".colorList li");
+      colorList.forEach((li) => {
+        li.addEventListener("click", (e) => {
+          document.body.style.backgroundColor = e.target.id;
+        });
+      });
+    </script>
+  </body>
+</html>
